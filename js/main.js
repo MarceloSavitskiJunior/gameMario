@@ -13,8 +13,8 @@ const down = () => {
 const endGame = () => {
     end.classList.add('end')
     if (!end.textContent.endsWith('!')) {
-        let teste = document.createTextNode("Fim de Jogo!");
-        end.appendChild(teste);
+        let fraseFimDeJogo = document.createTextNode("Fim de Jogo!");
+        end.appendChild(fraseFimDeJogo);
     }
 
     pipe.classList.remove('animation-pipe');
@@ -29,8 +29,6 @@ const checkCollision = () => {
         rectMario.bottom < rectPipe.top ||
         rectMario.top > rectPipe.bottom)) {
         endGame();
-    } else {
-        console.log('Elements are not touching or overlapping');
     }
 };
 
